@@ -33,8 +33,8 @@ export const recruiterFacts = [
   ["Roles", "Full-Stack · QA Automation · AI Engineer"],
   ["Stack", "React, Next.js, TypeScript, Python, PostgreSQL, AWS"],
   ["Languages", "Uzbek (native), English (full professional), Russian (professional), German (elementary)"],
-  ["Based in", "Tashkent · open to remote"],
-  ["Open to", "Engineering roles, internships, partnerships"],
+  ["Based in", "Tashkent · remote freelancer (Upwork, Cowork)"],
+  ["Open to", "New opportunities: full-time, part-time, freelance and partnerships"],
 ];
 
 export type Experience = {
@@ -73,11 +73,12 @@ export const experience: Experience[] = [
     tags: ["QA", "Manual & automated testing", "React", "Node.js"],
   },
   {
-    role: "Full-Stack QA Engineer",
-    company: "Self-employed",
+    role: "Remote Freelance Full-Stack QA Engineer",
+    company: "Upwork · Cowork",
     period: "Jan 2024 – Present",
     location: "Remote",
     points: [
+      "Deliver small web projects and QA work remotely for clients found on Upwork and Cowork.",
       "Built responsive, interactive web and mobile interfaces for clients, from requirements to delivery.",
       "Led a small development team and mentored junior developers on code quality.",
     ],

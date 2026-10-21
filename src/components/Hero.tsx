@@ -39,6 +39,12 @@ export default function Hero() {
             <span className="pulse-dot h-2 w-2 rounded-full bg-mint text-mint" />
             Building Bahola at <a className="font-medium text-white underline-offset-4 hover:underline" href={profile.links.company} target="_blank" rel="noreferrer">ooou.uz</a>
           </div>
+          <a
+            href="#contact"
+            className="mb-8 ml-2 inline-flex items-center gap-2 rounded-full border border-orange/30 bg-orange/10 px-3.5 py-1.5 text-xs font-medium text-orange transition-colors hover:bg-orange/20"
+          >
+            Open to new opportunities →
+          </a>
 
           <h1 className="text-[2.6rem] font-semibold leading-[1.02] tracking-[-0.035em] text-white sm:text-6xl lg:text-7xl">
             <span className="mask-line"><span style={{ "--d": "100ms" } as React.CSSProperties}>Sarvarbek</span></span>
