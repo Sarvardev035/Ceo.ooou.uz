@@ -12,7 +12,7 @@ export default function About() {
               From finding bugs to <span className="text-gradient">shipping a company.</span>
             </>
           }
-          sub="I started in QA, at Uyqur Team and with US clients on Upwork, where breaking things taught me how good software is built. I grew into full-stack development, competed in 10+ hackathons, and today I design, build, test and run ooou.uz myself, using Claude and Antigravity to move at the speed of a much larger team."
+          sub="I started in QA with US clients on Upwork and grew into a full-stack QA role at Uyqur Team, where breaking things taught me how good software is built. Along the way I competed in 10+ hackathons, and today I design, build, test and run ooou.uz myself, using Claude and Antigravity to move at the speed of a much larger team."
         />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

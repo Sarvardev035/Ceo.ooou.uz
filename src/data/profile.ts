@@ -62,12 +62,13 @@ export const experience: Experience[] = [
     tags: ["Next.js", "Prisma", "AWS", "Claude", "Antigravity"],
   },
   {
-    role: "QA Engineer · Full-Stack Developer",
+    role: "Full-Stack QA Developer",
     company: "Uyqur Team",
-    period: "",
+    period: "May 2026 – Jun 2026",
+    location: "On-site",
     points: [
-      "Tested releases end to end and turned bugs into clear, reproducible reports.",
-      "Grew from QA into full-stack work, shipping frontend and backend features for the team.",
+      "Worked on-site as a full-stack QA developer, testing releases end to end and turning bugs into clear, reproducible reports.",
+      "Shipped frontend and backend fixes alongside the team, closing the loop from bug report to deployed fix.",
     ],
     tags: ["QA", "Manual & automated testing", "React", "Node.js"],
   },
