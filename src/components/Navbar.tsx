@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "#about", label: "About" },
@@ -52,21 +53,24 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <a
-          href="#contact"
-          className="hidden rounded-full bg-white px-4 py-1.5 text-sm font-medium text-ink transition-transform hover:scale-105 md:inline-block"
-        >
-          Let&apos;s talk
-        </a>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <a
+            href="#contact"
+            className="hidden rounded-full bg-white px-4 py-1.5 text-sm font-medium text-ink transition-transform hover:scale-105 md:inline-block"
+          >
+            Let&apos;s talk
+          </a>
 
-        <button
-          onClick={() => setOpen((o) => !o)}
-          className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 md:hidden"
-          aria-label="Menu"
-        >
-          <span className={`h-0.5 w-5 bg-white transition-transform ${open ? "translate-y-1 rotate-45" : ""}`} />
-          <span className={`h-0.5 w-5 bg-white transition-transform ${open ? "-translate-y-1 -rotate-45" : ""}`} />
-        </button>
+          <button
+            onClick={() => setOpen((o) => !o)}
+            className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 md:hidden"
+            aria-label="Menu"
+          >
+            <span className={`h-0.5 w-5 bg-white transition-transform ${open ? "translate-y-1 rotate-45" : ""}`} />
+            <span className={`h-0.5 w-5 bg-white transition-transform ${open ? "-translate-y-1 -rotate-45" : ""}`} />
+          </button>
+        </div>
       </nav>
 
       <div

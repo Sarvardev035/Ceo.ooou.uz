@@ -41,13 +41,19 @@ const personJsonLd = {
   sameAs: ["https://www.linkedin.com/in/sarvar-sharipov-4bb187332/", "https://github.com/Sarvardev035", "https://t.me/go0fy"],
 };
 
+// Runs before paint so the saved (or system) theme applies without a flash.
+const themeScript = `try{var t=localStorage.getItem("theme");if(t==="light"||(!t&&matchMedia("(prefers-color-scheme: light)").matches))document.documentElement.classList.add("light")}catch(e){}`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className={`${inter.variable} ${mono.variable} noise font-sans antialiased`}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
         {children}

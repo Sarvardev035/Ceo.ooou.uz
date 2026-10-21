@@ -26,7 +26,7 @@ const stackRows = [
 
 function Phone({ step }: { step: number }) {
   return (
-    <div className="relative mx-auto h-[520px] w-[260px] rounded-[44px] border border-white/15 bg-[#0b1026] p-3 shadow-[0_40px_120px_-30px_#2f6bff]">
+    <div className="keep-dark relative mx-auto h-[520px] w-[260px] rounded-[44px] border border-white/15 bg-[#0b1026] p-3 shadow-[0_40px_120px_-30px_#2f6bff]">
       <div className="absolute left-1/2 top-3 z-10 h-5 w-20 -translate-x-1/2 rounded-full bg-black" />
       <div className="relative h-full overflow-hidden rounded-[34px] bg-[#f6f7fb] text-[#0b1026]">
         {/* Scan */}
@@ -172,7 +172,7 @@ export default function Bahola() {
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <div className="relative h-full overflow-hidden rounded-3xl bg-blue p-7 text-white">
+            <div className="keep-dark relative h-full overflow-hidden rounded-3xl bg-blue p-7 text-white">
               <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-orange/60 blur-3xl" />
               <p className="eyebrow !text-white/70">Live today</p>
               <p className="mt-4 text-2xl font-semibold leading-snug">Restaurants, hotels and clinics across Uzbekistan.</p>

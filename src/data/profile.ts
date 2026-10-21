@@ -13,7 +13,7 @@ export const profile = {
   location: "Tashkent, Uzbekistan",
   intro:
     "I build products end to end: from the first test case to production on AWS. Today I run ooou.uz and ship Bahola (SmartQR), a QR feedback system used by restaurants, hotels and clinics, with Claude and Antigravity as my AI pair engineers.",
-  email: "sarvarsharipov1035@gmail.com",
+  email: "sarvarsharipov33@gmail.com",
   links: {
     github: "https://github.com/Sarvardev035",
     linkedin: "https://www.linkedin.com/in/sarvar-sharipov-4bb187332/",

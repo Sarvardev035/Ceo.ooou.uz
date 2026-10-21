@@ -94,7 +94,7 @@ export default function Hero() {
             <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rounded-full bg-orange px-2 py-0.5 font-mono text-[10px] text-white">Antigravity</span>
           </div>
 
-          <div className="float glass relative overflow-hidden rounded-3xl shadow-2xl shadow-black/60">
+          <div className="keep-dark float glass relative overflow-hidden rounded-3xl shadow-2xl shadow-black/60">
             <div className="flex items-center gap-1.5 border-b border-white/10 px-4 py-3">
               <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
               <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
