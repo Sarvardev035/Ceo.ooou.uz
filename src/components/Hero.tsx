@@ -33,18 +33,20 @@ export default function Hero() {
 
       <div className="section-container relative z-10 grid items-center gap-14 lg:grid-cols-[1.25fr_1fr]">
         <div>
-          <div
-            className="mb-8 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] py-1.5 pl-2 pr-4 text-xs text-slate-300"
-          >
-            <span className="pulse-dot h-2 w-2 rounded-full bg-mint text-mint" />
-            Building Bahola at <a className="font-medium text-white underline-offset-4 hover:underline" href={profile.links.company} target="_blank" rel="noreferrer">ooou.uz</a>
+          <div className="mb-8 flex flex-wrap gap-2">
+            <div
+              className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] py-1.5 pl-2 pr-4 text-xs text-slate-300"
+            >
+              <span className="pulse-dot h-2 w-2 rounded-full bg-mint text-mint" />
+              Building Bahola at <a className="font-medium text-white underline-offset-4 hover:underline" href={profile.links.company} target="_blank" rel="noreferrer">ooou.uz</a>
+            </div>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full border border-orange/30 bg-orange/10 px-3.5 py-1.5 text-xs font-medium text-orange transition-colors hover:bg-orange/20"
+            >
+              Open to new opportunities →
+            </a>
           </div>
-          <a
-            href="#contact"
-            className="mb-8 ml-2 inline-flex items-center gap-2 rounded-full border border-orange/30 bg-orange/10 px-3.5 py-1.5 text-xs font-medium text-orange transition-colors hover:bg-orange/20"
-          >
-            Open to new opportunities →
-          </a>
 
           <h1 className="text-[2.6rem] font-semibold leading-[1.02] tracking-[-0.035em] text-white sm:text-6xl lg:text-7xl">
             <span className="mask-line"><span style={{ "--d": "100ms" } as React.CSSProperties}>Sarvarbek</span></span>
