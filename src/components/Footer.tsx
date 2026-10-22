@@ -13,10 +13,11 @@ export default function Footer() {
         </p>
         <div className="flex flex-col items-center justify-between gap-4 py-10 text-sm text-slate-500 sm:flex-row">
           <p>© {new Date().getFullYear()} {profile.name}. Built with Next.js, Claude &amp; Antigravity.</p>
-          <div className="flex gap-5">
+          <div className="flex flex-wrap justify-center gap-5">
             <a href={profile.links.github} target="_blank" rel="noreferrer" className="hover:text-white">GitHub</a>
             <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="hover:text-white">LinkedIn</a>
             <a href={profile.links.telegram} target="_blank" rel="noreferrer" className="hover:text-white">Telegram</a>
+            <a href={profile.links.crm} target="_blank" rel="noreferrer" className="hover:text-white">CRM ↗</a>
             <a href="#top" className="hover:text-white">Top ↑</a>
           </div>
         </div>

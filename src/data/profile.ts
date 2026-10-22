@@ -19,6 +19,7 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/sarvar-sharipov-4bb187332/",
     telegram: "https://t.me/go0fy",
     company: "https://ooou.uz",
+    crm: "https://crm.ooou.uz",
   },
 };
 
