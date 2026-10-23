@@ -26,7 +26,7 @@ export function Reveal({
           io.disconnect();
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0, rootMargin: "0px 0px 12% 0px" }
     );
     io.observe(el);
     return () => io.disconnect();
@@ -41,7 +41,7 @@ export function Reveal({
 }
 
 /** Counts from 0 to `to` when visible. */
-export function Counter({ to, suffix = "", duration = 1800 }: { to: number; suffix?: string; duration?: number }) {
+export function Counter({ to, suffix = "", duration = 1200 }: { to: number; suffix?: string; duration?: number }) {
   const ref = useRef<HTMLSpanElement>(null);
   const [val, setVal] = useState(0);
 

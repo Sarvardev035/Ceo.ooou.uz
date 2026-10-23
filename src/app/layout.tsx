@@ -42,7 +42,7 @@ const personJsonLd = {
 };
 
 // Runs before paint so the saved (or system) theme applies without a flash.
-const themeScript = `try{var t=localStorage.getItem("theme");if(t==="light"||(!t&&matchMedia("(prefers-color-scheme: light)").matches))document.documentElement.classList.add("light")}catch(e){}`;
+const themeScript = `try{var t=localStorage.getItem("theme");if(t==="light")document.documentElement.classList.add("light")}catch(e){}`;
 
 export default function RootLayout({
   children,

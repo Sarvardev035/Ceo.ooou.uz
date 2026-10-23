@@ -30,7 +30,7 @@ export default function Projects() {
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-400">{p.description}</p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {p.tags.map((t) => (
-                    <span key={t} className="rounded-full bg-white/[0.04] px-3 py-1 font-mono text-[11px] text-slate-300">
+                    <span key={t} className="tag-hover rounded-full bg-white/[0.04] px-3 py-1 font-mono text-[11px] text-slate-300 hover:bg-blue/20 hover:text-white">
                       {t}
                     </span>
                   ))}

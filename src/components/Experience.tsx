@@ -42,7 +42,7 @@ export default function Experience() {
                   </ul>
                   <div className="mt-6 flex flex-wrap gap-2">
                     {job.tags.map((t) => (
-                      <span key={t} className="rounded-full bg-white/[0.04] px-3 py-1 font-mono text-[11px] text-slate-300">
+                      <span key={t} className="tag-hover rounded-full bg-white/[0.04] px-3 py-1 font-mono text-[11px] text-slate-300 hover:bg-blue/20 hover:text-white">
                         {t}
                       </span>
                     ))}
