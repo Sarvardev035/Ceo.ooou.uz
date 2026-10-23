@@ -12,7 +12,7 @@ export default function Footer() {
           Ceo.ooou.uz
         </p>
         <div className="flex flex-col items-center justify-between gap-4 py-10 text-sm text-slate-500 sm:flex-row">
-          <p>© {new Date().getFullYear()} {profile.name}. Built with Next.js, Claude &amp; Antigravity.</p>
+          <p>© {new Date().getFullYear()} {profile.name}. We can ship anything on your mind, or build a $1M company.</p>
           <div className="flex flex-wrap justify-center gap-5">
             <a href={profile.links.github} target="_blank" rel="noreferrer" className="hover:text-white">GitHub</a>
             <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="hover:text-white">LinkedIn</a>

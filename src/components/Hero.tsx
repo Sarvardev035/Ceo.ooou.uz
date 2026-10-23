@@ -106,6 +106,9 @@ export default function Hero() {
               <img
                 src="https://github.com/Sarvardev035.png"
                 alt={profile.name}
+                width={56}
+                height={56}
+                decoding="async"
                 className="h-14 w-14 rounded-2xl object-cover ring-2 ring-blue/40"
               />
               <div>

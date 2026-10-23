@@ -75,52 +75,47 @@ export function Counter({ to, suffix = "", duration = 1200 }: { to: number; suff
 /** Tracks the pointer on `.spot` cards (for the glow) and draws a scroll progress bar. */
 export function PointerFx() {
   const barRef = useRef<HTMLDivElement>(null);
-  const glowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    let frame = 0;
+    const tracks = Array.from(document.querySelectorAll<HTMLElement>("[data-progress]"));
     const onMove = (e: PointerEvent) => {
-      if (glowRef.current) {
-        glowRef.current.style.transform = `translate3d(${e.clientX - 300}px, ${e.clientY - 300}px, 0)`;
-      }
       const card = (e.target as HTMLElement | null)?.closest<HTMLElement>(".spot");
-      if (card) {
-        const r = card.getBoundingClientRect();
-        card.style.setProperty("--mx", `${e.clientX - r.left}px`);
-        card.style.setProperty("--my", `${e.clientY - r.top}px`);
-      }
+      if (!card) return;
+      const r = card.getBoundingClientRect();
+      card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+      card.style.setProperty("--my", `${e.clientY - r.top}px`);
     };
-    const onScroll = () => {
+    const update = () => {
+      frame = 0;
       const h = document.documentElement;
       const p = h.scrollTop / Math.max(1, h.scrollHeight - h.clientHeight);
       if (barRef.current) barRef.current.style.transform = `scaleX(${p})`;
-      document.querySelectorAll<HTMLElement>("[data-progress]").forEach((el) => {
+      tracks.forEach((el) => {
         const r = el.getBoundingClientRect();
         const vis = (window.innerHeight * 0.6 - r.top) / r.height;
         el.style.setProperty("--p", String(Math.max(0, Math.min(1, vis))));
       });
     };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
     window.addEventListener("pointermove", onMove, { passive: true });
     window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+    update();
     return () => {
+      cancelAnimationFrame(frame);
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("scroll", onScroll);
     };
   }, []);
 
   return (
-    <>
-      <div
-        ref={barRef}
-        className="fixed left-0 top-0 z-[70] h-[2px] w-full origin-left bg-gradient-to-r from-blue via-[#8fb0ff] to-orange"
-        style={{ transform: "scaleX(0)" }}
-      />
-      <div
-        ref={glowRef}
-        aria-hidden
-        className="pointer-events-none fixed left-0 top-0 z-0 hidden h-[600px] w-[600px] rounded-full bg-blue/10 blur-[120px] md:block"
-      />
-    </>
+    <div
+      ref={barRef}
+      className="fixed left-0 top-0 z-[70] h-[2px] w-full origin-left bg-gradient-to-r from-blue via-[#8fb0ff] to-orange"
+      style={{ transform: "scaleX(0)" }}
+    />
   );
 }
 

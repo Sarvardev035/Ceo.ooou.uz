@@ -49,22 +49,14 @@ body {
   mask-image: radial-gradient(ellipse at 50% 0%, #000 30%, transparent 75%);
 }
 
-.noise::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 60;
-  opacity: 0.05;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
 
 .aurora {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(110px);
-  opacity: 0.55;
-  animation: drift 18s ease-in-out infinite alternate;
+  filter: blur(90px);
+  opacity: 0.5;
+  pointer-events: none;
+  contain: strict;
 }
 @keyframes drift {
   0% { transform: translate3d(0, 0, 0) scale(1); }
@@ -126,9 +118,8 @@ body {
 
 /* ---------- cards ---------- */
 .glass {
-  background: linear-gradient(180deg, rgba(20, 27, 58, 0.55), rgba(11, 16, 38, 0.35));
+  background: linear-gradient(180deg, rgba(20, 27, 58, 0.75), rgba(11, 16, 38, 0.6));
   border: 1px solid rgba(143, 176, 255, 0.12);
-  backdrop-filter: blur(14px);
 }
 
 .spot {
@@ -291,10 +282,7 @@ html.light body {
   background: #f6f7fb;
   color: #141b3a;
 }
-html.light .noise::after {
-  opacity: 0.025;
-}
-html.light .bg-grid {
+html.light html.light .bg-grid {
   background-image:
     linear-gradient(rgba(11, 16, 38, 0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(11, 16, 38, 0.06) 1px, transparent 1px);
