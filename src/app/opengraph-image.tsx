@@ -1,10 +1,15 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 export const alt = "Ceo.ooou.uz · Sarvarbek Sharipboyev";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OpengraphImage() {
+export default async function OpengraphImage() {
+  const svg = await readFile(join(process.cwd(), "public/logo.svg"));
+  const logo = `data:image/svg+xml;base64,${svg.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -20,7 +25,7 @@ export default function OpengraphImage() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 30, color: "#8fb0ff" }}>
-          <div style={{ display: "flex", background: "#2f6bff", color: "#fff", borderRadius: 12, padding: "6px 12px", fontSize: 22 }}>CEO</div>
+          <img src={logo} width={56} height={56} alt="" />
           Ceo.ooou.uz
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>

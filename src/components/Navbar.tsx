@@ -32,9 +32,14 @@ export default function Navbar() {
         }`}
       >
         <a href="#top" className="group flex items-center gap-2 font-mono text-sm font-semibold tracking-tight text-white">
-          <span className="relative flex h-7 w-7 items-center justify-center rounded-lg bg-blue text-[11px] font-bold transition-transform duration-500 group-hover:rotate-[360deg]">
-            CEO
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.svg"
+            alt=""
+            width={28}
+            height={28}
+            className="h-7 w-7 rounded-lg transition-transform duration-500 group-hover:rotate-[360deg]"
+          />
           <span>
             Ceo<span className="text-orange">.</span>ooou<span className="text-orange">.</span>uz
           </span>
