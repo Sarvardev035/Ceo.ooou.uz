@@ -25,7 +25,7 @@ export default async function OpengraphImage() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 30, color: "#8fb0ff" }}>
-          <img src={logo} width={56} height={56} alt="" />
+          <img src={logo} width={72} height={72} alt="" />
           Ceo.ooou.uz
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
